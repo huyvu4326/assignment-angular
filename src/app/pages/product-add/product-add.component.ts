@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
+import { IProduct } from 'src/app/interfaces/product';
 import { ProductService } from 'src/app/services/services.component';
 
 @Component({
@@ -8,16 +9,24 @@ import { ProductService } from 'src/app/services/services.component';
   styleUrls: ['./product-add.component.scss']
 })
 export class ProductAddComponent {
-  productForm = this.FormBuilder.group({
-    name: [""],
-    price: [0]
-   })
-   constructor(
+  productForm = this.formBuilder.group({
+    name: ['', [Validators.required, Validators.minLength(4)]],
+    price: [0],
+  })
+  constructor(
     private productService: ProductService,
-    private FormBuilder: FormBuilder) {
-   }
-   onHandleSubmit(){
-    console.log(this.productForm.value);
-    
-   }
+    private formBuilder: FormBuilder) { }
+
+  onHandleSubmit() {
+    if (this.productForm.valid) {
+      const product: IProduct = {
+        name: this.productForm.value.name || "",
+        price: this.productForm.value.price || 0,
+      }
+      this.productService.addProduct(product).subscribe(product => {
+        console.log('Thành công', product)
+      })
+    }
+
+  }
 }

@@ -9,11 +9,12 @@ const routes: Routes = [
   {
     path: "admin", component: AdminLayoutComponent, children: [
       { path: "", redirectTo: "dashboard", pathMatch: "full" },
-      { path: "product/:id", component: ProductDetailComponent},
+      
       { path: "product/add", component: ProductAddComponent},
       { path: "product/:id/edit", component: ProductEditComponent}
     ]
-  }
+  },
+  { path: "product/:id", component: ProductDetailComponent},
 ];
 
 @NgModule({
