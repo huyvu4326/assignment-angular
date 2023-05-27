@@ -10,6 +10,7 @@ import { ProductDetailComponent } from './pages/product-detail/product-detail.co
 import { ProductAddComponent } from './pages/product-add/product-add.component';
 import { ProductEditComponent } from './pages/product-edit/product-edit.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { ProductListComponent } from './pages/product-list/product-list.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
     ProductAddComponent,
     ProductEditComponent,
     AdminLayoutComponent,
+    ProductListComponent,
    
   ],
   imports: [

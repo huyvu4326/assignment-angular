@@ -7,15 +7,24 @@
       "img": "anh"
     },
     {
-      "id": 3,
-      "name": "Product C",
-      "price": 400,
-      "img": "anh"
+      "name": "Product 1 update",
+      "price": 5555555,
+      "id": 3
     },
     {
-      "name": "product a updaye",
-      "price": "55555",
+      "name": "Product 2",
+      "price": 44444,
       "id": 4
+    },
+    {
+      "name": "Apple iPad Pro update",
+      "price": 55555555,
+      "id": 5
+    },
+    {
+      "name": "Product 4",
+      "price": 6666666,
+      "id": 6
     }
   ]
 }
