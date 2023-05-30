@@ -6,20 +6,19 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
 import { ProductAddComponent } from './pages/product-add/product-add.component';
 import { ProductEditComponent } from './pages/product-edit/product-edit.component';
-import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
 import { ProductListComponent } from './pages/product-list/product-list.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductDetailComponent,
     ProductAddComponent,
     ProductEditComponent,
-    AdminLayoutComponent,
+    ProductDetailComponent,
     ProductListComponent,
    
   ],

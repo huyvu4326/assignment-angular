@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IProduct } from 'src/app/interfaces/product';
-import { ProductService } from 'src/app/services/services.component';
+import { ProductServices } from 'src/app/services/services.component';
 
 @Component({
   selector: 'app-product-list',
@@ -9,20 +9,19 @@ import { ProductService } from 'src/app/services/services.component';
 })
 export class ProductListComponent {
   products: IProduct[] = [];
-
-  constructor(private productService: ProductService) {
-    this.productService.getProducts().subscribe(data => {
+  constructor(private ProductServices: ProductServices){
+    this.ProductServices.getProduct().subscribe(data => {
       this.products = data
     }, error => {
-      console.log(error.message)
+      console.log(error.message);
     })
   }
-  setValue(e: any) {
-  }
+  set value(e: any){
 
-  removeItem(id: any) {
-    this.productService.deleteProduct(id).subscribe(() => {
-      location.reload();
+  }
+  onHandleRemove(id: any){
+    this.ProductServices.deleteProduct(id).subscribe(() => {
+      location.reload()
     })
   }
 }

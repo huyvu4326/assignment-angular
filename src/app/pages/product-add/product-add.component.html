@@ -1,24 +1,5 @@
-
-<form (ngSubmit)="onHandleSubmit()" [formGroup]="productForm" class="my-form">
-    <div class="form-group">
-      <label for="name">Tên sản phẩm:</label>
-      <input 
-        type="text" 
-        id="name" 
-        formControlName="name" 
-        placeholder="Nhập tên sản phẩm" 
-        class="form-control"
-      >
-    </div>
-    <div class="form-group">
-      <label for="price">Giá sản phẩm:</label>
-      <input 
-        type="number" 
-        id="price" 
-        formControlName="price" 
-        placeholder="Nhập giá sản phẩm" 
-        class="form-control"
-      >
-    </div>
-    <button type="submit" class="btn btn-primary">Thêm sản phẩm</button>
-  </form>
+<form (ngSubmit)="onHandleSubmit()" [formGroup]="productForm" class="">
+    <input type="text " id="Product Name" formControlName="name" placeholder="name">
+    <input type="text " id="Product Price" formControlName="price" placeholder="price">
+    <button type="submit">Submit</button>
+</form>

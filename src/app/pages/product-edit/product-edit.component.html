@@ -1,19 +1,5 @@
-<form (ngSubmit) = "onHandleUpdate()" [formGroup]= "productForm">
-    <div class="mb-3">
-        <input 
-            type="text" 
-            formControlName="name"
-            placeholder="Tên sản phẩm"
-            class="form-control"
-        />
-    </div>
-    <div class="mb-3">
-        <input
-            type="number" 
-            formControlName="price"
-            placeholder="Giá sản phẩm"
-            class="form-control"
-        />
-    </div>
-    <button type="submit" class="btn btn-primary"> Cập nhật sản phẩm</button>
+<form (ngSubmit)="onHandleUpdate()" [formGroup]="productForm" class="">
+    <input type="text " id="Product Name" formControlName="name" placeholder="name">
+    <input type="text " id="Product Price" formControlName="price" placeholder="price">
+    <button type="submit">Submit</button>
 </form>
